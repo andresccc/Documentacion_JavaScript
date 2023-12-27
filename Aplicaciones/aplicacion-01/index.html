@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario basico</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <form id="miFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="color">Color favorito:</label>
+    <input type="text" id="color" name="color">
+
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" name="edad">
+
+    <label for="genero">Genero:</label>
+    <input type="text" id="genero" name="genero">
+
+    <button type="button" onclick="datos()">Enviar</button>
+  </form>
+  
+  <p>En consola aparecen los datos que agregaste</p>
+
+  <form id="miFormulario">
+    <p>Agregar un nombre al array</p>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="agregarNombre" name="agregarNombre">
+
+    <button type="button" onclick="cambiosArray()">Enviar</button>
+  </form>
+
+  <form id="miFormulario">
+    <p>Agregar varios nombres al array</p>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="variosNombres" name="variosNombres">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="variosNombres2" name="variosNombres2">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="variosNombres3" name="variosNombres3">
+
+    <button type="button" onclick="cambiosArray()">Enviar</button>
+  </form>
+  <p>Diseño visual realizado por chatGPT</p>
+  <script src="app.js"></script>
+</body>
+</html>
