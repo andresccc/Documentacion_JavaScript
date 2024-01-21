@@ -2,10 +2,20 @@ console.log('----------------------------------');
 
 class PersonaNatural{
 
+    static _conteo = 0;
+    static get conteo() {
+        return PersonaNatural._conteo + ' instancias';
+    }
+
+    static mensaje() {
+        console.log('Hola a todos, soy un metodo estatico');
+    }
+
     //son propiedades de clases
     nombre = '';
     codigo = '';
     frase = '';
+    comida = '';
 
     constructor(nombre, codigo, frase) {
         if (!nombre) throw Error('necesitamos el nombre');
@@ -14,7 +24,15 @@ class PersonaNatural{
         this.codigo = codigo;
         this.frase = frase;
 
-        console.log('Hola!');
+        PersonaNatural._conteo++;
+    }
+
+    set setComida(comida) {
+        this.comida = comida.toUpperCase();
+    }
+
+    get getComida() {
+        return `La comida favorita de ${this.nombre} es ${this.comida}`;
     }
 
     //metodo
@@ -41,4 +59,10 @@ console.log(policia);
 spiderman.quienSoy();
 spiderman.miFrase();
 
-tiaMery.miFrase();
+spiderman.setComida = 'El pie de cereza de la tia May';
+
+console.log(spiderman.getComida);
+console.log('Conteo estatico', PersonaNatural._conteo);
+console.log('Consumimos el get', PersonaNatural.conteo);
+console.log('EL metodo estatico responde: ');
+PersonaNatural.mensaje();

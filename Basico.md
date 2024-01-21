@@ -14,6 +14,8 @@
 
 #### 'use strict' -> Al colocarlo evita errores con un modo restrictivo, recomendado para las funciónes anonimas
 
+#### Refactorización -> Se hace con el objetivo de mejorar la estructura, la mantenibilidad y la legibilidad del código
+
 ## TIPOS DE DATOS PRIMITIVOS
 
 ### typeof -> Revisar que tipo de dato es una variable
@@ -154,8 +156,22 @@
 
 #### class Clase { propiedades constructor() { } } -> Las clases inician con mayuscula
 
-#### metodo () { } -> Esto es un metodo, casi siempre se pone debajo del constructor
+#### set setVariable( variable ){ codigo } -> Sirve para establecer un valor
+
+#### get getVarible(){ return } -> Recuperar una propiedad, es conveniente usar return
+
+#### static variable = ''; -> La propiedad estatica, puedes acceder a ella sin crear una instancia
+
+#### static metodo() { } -> Esto es un metodo estatico, puedes acceder a el sin crear una instancia
+
+#### metodo() { } -> Esto es un metodo, casi siempre se pone debajo del constructor
 
 #### this.objeto -> this. se usa para llamar un objeto que se encuentra un nivel mas arriba
 
-####
+#### variable.toUpperCase(); -> Cambiar las letras a mayuscula
+
+#### class subClase extends Clase{ constructor() { super(); } } -> Crear una sub clase o clase extendida de otra
+
+#### #variable, #metodo -> con # declaramos variables y metodos privados
+
+#### -> Singleton, instancia unica de una clase, algo unico
